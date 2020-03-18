@@ -1,19 +1,11 @@
-<html>
-  <head>
-    <title>Adopt Don't Shop | All Shelters</title>
-    <link href="./app/assets/stylesheets/shelters_index.css" rel="stylesheet" title="Shelters Index">
-  </head>
-  <body>
-    <header>
-      <nav>
-        <a href="/">Home</a>
-      </nav>
-    </header>
-    <main>
-      <h1>All Shelters</h1>
-      <% @shelters.each do |shelter| %>
-        <h2><%= shelter.name %></h2>
-      <% end %>
-    </main>
-  </body>
-</html>
+<header>
+  <nav>
+    <a href="/">Home</a>
+  </nav>
+</header>
+<main>
+  <h1>All Shelters</h1>
+  <% @shelters.each do |shelter| %>
+    <h2><%= shelter.name %></h2>
+  <% end %>
+</main>
