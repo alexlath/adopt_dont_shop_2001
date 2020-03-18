@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+shelter1 = Shelter.create(name:"Ripley's Playhouse")
+shelter2 = Shelter.create(name:"Camp Bow Wow")
+shelter3 = Shelter.create(name:"Camp Bug Juice")
