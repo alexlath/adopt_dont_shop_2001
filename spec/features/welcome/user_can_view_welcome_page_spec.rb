@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "welcome page", type: :feature do
-  it "can view a welcome page" do
+  it "can show a welcome page" do
 
     visit "/"
 
