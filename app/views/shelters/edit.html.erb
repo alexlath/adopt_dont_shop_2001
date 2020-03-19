@@ -1,0 +1,18 @@
+<header>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/shelters">Shelters</a>
+  </nav>
+</header>
+<main>
+  <form name="Update Shelter" action="/shelters" method="patch">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <p>Enter a new shelter:</p>
+      <input type='text' name='shelter[name]' placeholder='Name'/><br/>
+      <input type='text' name='shelter[address]' placeholder='Address'/><br/>
+      <input type='text' name='shelter[city]' placeholder='City'/><br/>
+      <input type='text' name='shelter[state]' placeholder='State'/><br/>
+      <input type='text' name='shelter[zip]' placeholder='Zip'/><br/>
+      <input type='submit' name='submit' value='Create Shelter'/>
+  </form>
+</main>
