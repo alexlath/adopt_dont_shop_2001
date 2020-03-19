@@ -4,8 +4,6 @@ RSpec.describe "shelters index page", type: :feature do
   it "can create a new shelter" do
 
     visit "/shelters"
-    expect(page).to have_content("New Shelter")
-
     click_on 'New Shelter'
     expect(page).to have_current_path "/shelters/new"
 
@@ -14,8 +12,9 @@ RSpec.describe "shelters index page", type: :feature do
     fill_in 'shelter[city]', with: "Testing3"
     fill_in 'shelter[state]', with: "Testing4"
     fill_in 'shelter[zip]', with: "Testing5"
-    click_on 'Create Shelter'
+    click_on 'submit'
 
+    expect(page).to have_current_path "/shelters"
     expect(page).to have_content("Testing1")
   end
 end

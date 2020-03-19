@@ -5,14 +5,14 @@
   </nav>
 </header>
 <main>
-  <form action="/shelters" method="post">
+  <form name="Create Shelter" action="/shelters" method="post">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
     <p>Enter a new shelter:</p>
       <input type='text' name='shelter[name]' placeholder='Name'/><br/>
-      <input type='textarea' name='shelter[address]' placeholder='Address'/><br/>
-      <input type='textarea' name='shelter[city]' placeholder='City'/><br/>
-      <input type='textarea' name='shelter[state]' placeholder='State'/><br/>
-      <input type='textarea' name='shelter[zip]' placeholder='Zip'/><br/>
-      <input type='Submit' value='Create Shelter'/>
+      <input type='text' name='shelter[address]' placeholder='Address'/><br/>
+      <input type='text' name='shelter[city]' placeholder='City'/><br/>
+      <input type='text' name='shelter[state]' placeholder='State'/><br/>
+      <input type='text' name='shelter[zip]' placeholder='Zip'/><br/>
+      <input type='submit' name='submit' value='Create Shelter'/>
   </form>
 </main>
