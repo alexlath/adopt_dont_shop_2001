@@ -1,7 +1,7 @@
 <header>
   <nav>
-    <a href="/">Home</a>
-    <a href="/shelters">Shelters</a>
+    <%= link_to "Home", "/" %>
+    <%= link_to "Shelters", "/shelters" %>
   </nav>
 </header>
 <main>
@@ -12,5 +12,6 @@
     <li><%= @shelter.state %></li>
     <li><%= @shelter.zip %></li>
   </ul>
-  
+  <p><%= link_to "Update Shelter", "#{@shelter.id}/edit" %></p>
+  <p><%= link_to "Delete Shelter", "#{@shelter.id}", method: :delete %></p>
 </main>

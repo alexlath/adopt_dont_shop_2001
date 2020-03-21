@@ -1,7 +1,7 @@
 <header>
   <nav>
-    <a href="/">Home</a>
-    <a href="/shelters">Shelters</a>
+    <%= link_to "Home", "/" %>
+    <%= link_to "Shelters", "/shelters" %>
   </nav>
 </header>
 <main>
@@ -16,16 +16,6 @@
     <%= text_field_tag :state %><br/>
     <%= label_tag :zip %><br/>
     <%= text_field_tag :zip %><br/>
-    <%= submit_tag 'Update Shelter' %>
+    <%= submit_tag "Update Shelter" %>
   <% end %>
 </main>
-  <!-- <form name="Update Shelter" action="/shelters" method="patch">
-    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-    <p>Enter updated shelter information:</p>
-      <input type='text' name='shelter[name]' placeholder='Name'/><br/>
-      <input type='text' name='shelter[address]' placeholder='Address'/><br/>
-      <input type='text' name='shelter[city]' placeholder='City'/><br/>
-      <input type='text' name='shelter[state]' placeholder='State'/><br/>
-      <input type='text' name='shelter[zip]' placeholder='Zip'/><br/>
-      <input type='submit' name='submit' value='Update Shelter'/>
-  </form> -->

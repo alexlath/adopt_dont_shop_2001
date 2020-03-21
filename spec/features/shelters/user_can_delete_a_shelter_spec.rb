@@ -1,11 +1,20 @@
 require 'rails_helper'
 
-RSpec.describe "shelters index page", type: :feature do
-  it "can delete a shelter" do
+RSpec.describe "As a user", type: :feature do
+  it "I can delete a shelter at 'shelters/:id'" do
 
-    visit "/shelters"
-    click_on 'Delete Shelter'
+    shelter = Shelter.create(name:    "Dumb Friends League",
+                             address: "2080 S. Quebec St.",
+                             city:    "Denver",
+                             state:   "CO",
+                             zip:     "80231")
 
-    expect(page).to not_have_content("Update1")
+    visit "/shelters/#{shelter.id}"
+    expect(page).to have_content "Delete Shelter"
+
+    click_on "Delete Shelter"
+
+    expect(page).to have_current_path "/shelters"
+    expect(page).to_not have_content("Dumb Friends League")
   end
 end

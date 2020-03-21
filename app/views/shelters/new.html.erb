@@ -1,7 +1,7 @@
 <header>
   <nav>
-    <a href="/">Home</a>
-    <a href="/shelters">Shelters</a>
+    <%= link_to "Home", "/" %>
+    <%= link_to "Shelters", "/shelters" %>
   </nav>
 </header>
 <main>
@@ -16,6 +16,6 @@
     <%= text_field_tag :state %><br/>
     <%= label_tag :zip %><br/>
     <%= text_field_tag :zip %><br/>
-    <%= submit_tag 'Create Shelter' %>
+    <%= submit_tag "Create Shelter" %>
   <% end %>
 </main>

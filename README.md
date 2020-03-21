@@ -157,7 +157,7 @@ and I am redirected to the Shelter Index page where I see the new Shelter listed
 ```
 
 ```
-[X] done, but test should be fixed
+[X]
 
 User Story 5, Shelter Update
 
@@ -179,7 +179,7 @@ and I am redirected to the Shelter's Show page where I see the shelter's updated
 ```
 
 ```
-[X] done, but test should be fixed
+[X]
 
 User Story 6, Shelter Delete
 
