@@ -18,7 +18,7 @@ RSpec.describe "As a user", type: :feature do
     visit "/shelters/#{shelter.id}"
     # expect(page).to have_content "Update Shelter"
 
-    click_on "Update Shelter"
+    click_link "Update Shelter"
     expect(page).to have_current_path "/shelters/#{shelter.id}/edit"
 
     fill_in "name", with: new_info[:name]

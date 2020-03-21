@@ -10,9 +10,8 @@ RSpec.describe "As a visitor", type: :feature do
                   zip:      "80231"}
 
       visit "/shelters"
-      expect(page).to have_content "New Shelter"
 
-      click_on "New Shelter"
+      click_link "New Shelter"
       expect(page).to have_current_path "/shelters/new"
 
       fill_in "name", with: new_info[:name]
