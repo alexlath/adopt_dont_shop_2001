@@ -1,11 +1,11 @@
 require 'rails_helper'
 
-RSpec.describe "welcome page", type: :feature do
-  it "can view a welcome page" do
+RSpec.describe "As a visitor", type: :feature do
+  it "I can view the welcome page at '/'" do
 
     visit "/"
 
     expect(page).to have_content("Welcome to Adopt Don't Shop")
-    expect(page).to have_content("Shelters List")
+    expect(page).to have_content("Shelters")
   end
 end
