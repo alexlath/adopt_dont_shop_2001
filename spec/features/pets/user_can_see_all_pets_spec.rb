@@ -8,14 +8,14 @@ RSpec.describe "As a visitor", type: :feature do
                              city:    "Denver",
                              state:   "CO",
                              zip:     "80231")
-    pet = shelter.pets.create(image:      "./app/assets/images/kona.jpeg",
+    pet = shelter.pets.create(image:      "kona.jpeg",
                               name:       "Kona",
                               approx_age: 6,
                               sex:        "Male")
 
     visit "/pets"
 
-    expect(page).to have_content(pet.image)
+    expect(page).to have_xpath("//img[contains(@src, #{pet.image})]")
     expect(page).to have_content(pet.name)
     expect(page).to have_content(pet.approx_age)
     expect(page).to have_content(pet.sex)

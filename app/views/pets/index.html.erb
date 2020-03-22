@@ -1,0 +1,17 @@
+<header>
+  <nav>
+    <%= link_to "Home", "/" %>
+    <%= link_to "Shelters", "/shelters" %>
+    <%= link_to "Pets", "/pets" %>
+  </nav>
+</header>
+<main>
+  <h1>All Pets</h1>
+  <% @pets.each do |pet| %>
+    <p><%= image_tag "#{pet.image}" %></p>
+    <p><%= pet.name %></p>
+    <p><%= pet.approx_age %></p>
+    <p><%= pet.sex %></p>
+    <p><%= pet.shelter.name %></p>
+  <% end %>
+</main>
