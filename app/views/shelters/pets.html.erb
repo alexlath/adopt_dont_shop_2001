@@ -1,10 +1,10 @@
 <main>
-  <h1>All Pets</h1>
-  <% @pets.each do |pet| %>
+  <h2><%= "#{@shelter.name} Pets" %></h2>
+  <% @shelter.pets.each do |pet| %>
     <p><%= image_tag "#{pet.image}" %></p>
     <p><%= pet.name %></p>
     <p><%= pet.approx_age %></p>
     <p><%= pet.sex %></p>
-    <p><%= pet.shelter.name %></p>
+    <p><%= pet.status %></p>
   <% end %>
 </main>

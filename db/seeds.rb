@@ -26,23 +26,78 @@ shelter4 = Shelter.create(name:     "Foothills Animal Shelter",
                           state:    "CO",
                           zip:      "80401")
 
-pet1 = Pet.create(image:      "kona.jpeg",
-                  name:       "Kona",
-                  approx_age: 6,
-                  sex:        "Male",
-                  shelter_id: shelter1.id)
-pet2 = Pet.create(image:      "benji.jpeg",
-                  name:       "Benji",
-                  approx_age: 2,
-                  sex:        "Male",
-                  shelter_id: shelter1.id)
-pet3 = Pet.create(image:      "molly.jpg",
-                  name:       "Molly",
-                  approx_age: 11,
-                  sex:        "Female",
-                  shelter_id: shelter3.id)
-pet4 = Pet.create(image:      "pearl.jpg",
-                  name:       "Pearl",
-                  approx_age: 12,
-                  sex:        "Female",
-                  shelter_id: shelter3.id)
+pet1 = shelter1.pets.create(image:        "kona.jpeg",
+                            name:         "Kona",
+                            description:  "Kona greets everyone with the \
+                                          biggest smile! He's always happy and \
+                                          is so easy to fall in love with. He \
+                                          seems to love everyone he meets, but \
+                                          can get a little overly excited some \
+                                          times and may knock little kids \
+                                          down. He is reportedly housebroken \
+                                          and does well when left alone in the \
+                                          home. He would benefit from daily \
+                                          walks and lots of playtime!",
+                            approx_age:   6,
+                            sex:          "Male",
+                            status:       "Adoptable")
+pet2 = shelter1.pets.create(image:        "benji.jpeg",
+                            name:         "Benji",
+                            description:  "Benji is a wonderful boy with a \
+                                          great smile! He loves his people and \
+                                          is happiest by their side. In the \
+                                          past, he spent most of his time in \
+                                          the yard and was crated at night \
+                                          indoors. This has given him little \
+                                          chance of socialization outside of \
+                                          his home and family. Like many dogs, \
+                                          being in a shelter can be scary. \
+                                          This is especially true for dogs \
+                                          like Benji, who have never left \
+                                          their property. Our behavior staff \
+                                          and volunteers have been working \
+                                          with Benji to overcome some of these \
+                                          fears and he is doing well, but \
+                                          taking it day by day. We have \
+                                          learned that he is more comfortable \
+                                          around women will take extra time to \
+                                          adjust to men. We have also learned \
+                                          that he will do anything for a treat \
+                                          and is very affectionate! He loves \
+                                          going for walks and would benefit \
+                                          from a no-pull harness due to his \
+                                          strength.",
+                            approx_age:   2,
+                            sex:          "Male",
+                            status:       "Pending Adoption")
+pet3 = shelter3.pets.create(image:        "molly.jpg",
+                            name:         "Molly",
+                            description:  "Hi, everybody! Did you know that \
+                                          Molly means 'star of the sea?' This \
+                                          Molly here may soon mean 'star of \
+                                          your life!' If you like the sound of \
+                                          that, let me tell you more about \
+                                          myself. You will love what you hear! \
+                                          I'm a super sweet, 11-year-old \
+                                          Australian Cattle Dog female. I am \
+                                          an adorable, medium-sized girl \
+                                          weighing about 35 lbs. What a great \
+                                          size, don't you think?",
+                            approx_age:   11,
+                            sex:          "Female",
+                            status:       "Adoptable")
+pet4 = shelter3.pets.create(image:        "pearl.jpg",
+                            name:         "Pearl",
+                            description:  "Hey there - my name is Pearl. Some \
+                                          people call me 'Miss Pearl' or \
+                                          'Pearly Girl', but I pretty much \
+                                          know my name by now, so I will \
+                                          respond to any of those! I'm told \
+                                          that 'pearls' are known to attract \
+                                          wealth and luck. Well I don't know \
+                                          about the wealth part, but my luck \
+                                          sure turned around when I came to \
+                                          MaxFund back in April of 2019.",
+                            approx_age:   12,
+                            sex:          "Female",
+                            status:       "Pending Adoption")
