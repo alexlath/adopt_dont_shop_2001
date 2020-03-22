@@ -16,19 +16,19 @@ RSpec.describe "As a user", type: :feature do
                 zip:      "80223"}
 
     visit "/shelters/#{shelter.id}"
-    # expect(page).to have_content "Update Shelter"
 
+    click_link "Update Shelter"
+
+    expect(page).to have_current_path("/shelters/#{shelter.id}/edit")
+
+    fill_in :name, with: new_info[:name]
+    fill_in :address, with: new_info[:address]
+    fill_in :city, with: new_info[:city]
+    fill_in :state, with: new_info[:state]
+    fill_in :zip, with: new_info[:zip]
     click_on "Update Shelter"
-    expect(page).to have_current_path "/shelters/#{shelter.id}/edit"
 
-    fill_in "name", with: new_info[:name]
-    fill_in "address", with: new_info[:address]
-    fill_in "city", with: new_info[:city]
-    fill_in "state", with: new_info[:state]
-    fill_in "zip", with: new_info[:zip]
-    click_on "Update Shelter"
-
-    expect(page).to have_current_path "/shelters/#{shelter.id}"
+    expect(page).to have_current_path("/shelters/#{shelter.id}")
     expect(page).to have_content(new_info[:name])
     expect(page).to have_content(new_info[:address])
     expect(page).to have_content(new_info[:city])

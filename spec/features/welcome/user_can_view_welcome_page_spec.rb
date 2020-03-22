@@ -5,7 +5,9 @@ RSpec.describe "As a visitor", type: :feature do
 
     visit "/"
 
+    expect(page).to have_link("Home")
+    expect(page).to have_link("All Shelters")
+    expect(page).to have_link("All Pets")
     expect(page).to have_content("Welcome to Adopt Don't Shop")
-    expect(page).to have_content("Shelters")
   end
 end

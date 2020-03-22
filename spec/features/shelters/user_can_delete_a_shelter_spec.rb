@@ -10,11 +10,10 @@ RSpec.describe "As a user", type: :feature do
                              zip:     "80231")
 
     visit "/shelters/#{shelter.id}"
-    expect(page).to have_content "Delete Shelter"
 
-    click_on "Delete Shelter"
+    click_link "Delete Shelter"
 
-    expect(page).to have_current_path "/shelters"
-    expect(page).to_not have_content("Dumb Friends League")
+    expect(page).to have_current_path("/shelters")
+    expect(page).to_not have_content(shelter.name)
   end
 end
