@@ -9,12 +9,6 @@ RSpec.describe "As a visitor", type: :feature do
                              state:   "CO",
                              zip:     "80231")
 
-    new_info = {name:     "Denver Animal Shelter",
-                address:  "1241 W. Bayaud Ave.",
-                city:     "Denver",
-                state:    "CO",
-                zip:      "80223"}
-
     visit "/shelters"
 
     click_link "Update Shelter"
