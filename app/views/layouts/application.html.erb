@@ -9,13 +9,15 @@
   </head>
 
   <body>
-    <header>
-      <nav>
-        <%= link_to "Home", "/" %>
-        <%= link_to "Shelter Index", "/shelters" %>
-        <%= link_to "Pet Index", "/pets" %>
-      </nav>
-    </header>
-    <%= yield %>
+    <div class="container">
+      <header>
+        <nav>
+          <%= link_to "Home", "/" %> |
+          <%= link_to "Shelter Index", "/shelters" %> |
+          <%= link_to "Pet Index", "/pets" %>
+        </nav>
+      </header>
+      <%= yield %>
+    </div>
   </body>
 </html>
