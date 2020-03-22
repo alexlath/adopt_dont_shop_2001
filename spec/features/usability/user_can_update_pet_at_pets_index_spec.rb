@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "As a visitor", type: :feature do
-  it "I can see all pets at '/pets'" do
+  it "I can update a pet at '/pets'" do
 
     shelter = Shelter.create(name:    "Dumb Friends League",
                              address: "2080 S. Quebec St.",
@@ -17,11 +17,8 @@ RSpec.describe "As a visitor", type: :feature do
                               status:       "adoptable")
 
     visit "/pets"
+    click_link "Update Pet"
 
-    expect(page).to have_xpath("//img[contains(@src, '#{pet.image}')]")
-    expect(page).to have_content(pet.name)
-    expect(page).to have_content("Approximate Age: #{pet.approx_age}")
-    expect(page).to have_content("Sex: #{pet.sex}")
-    expect(page).to have_content("Shelter: #{pet.shelter.name}")
+    expect(page).to have_current_path("/pets/#{pet.id}/edit")
   end
 end

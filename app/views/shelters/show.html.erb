@@ -4,6 +4,7 @@
     <%= @shelter.city %><br/>
     <%= @shelter.state %><br/>
     <%= @shelter.zip %></p>
+  <p><%= link_to "Shelter Pets", "#{@shelter.id}/pets" %></p>
   <p><%= link_to "Update Shelter", "#{@shelter.id}/edit" %></p>
   <p><%= link_to "Delete Shelter", "#{@shelter.id}", method: :delete %></p>
 </main>
