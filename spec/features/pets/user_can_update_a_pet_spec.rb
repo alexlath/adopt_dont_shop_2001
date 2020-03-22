@@ -9,14 +9,14 @@ RSpec.describe "As a visitor", type: :feature do
                              state:   "CO",
                              zip:     "80231")
 
-    pet = shelter.pets.create(image:        "kona.jpeg",
+    pet = shelter.pets.create(image:        "https://i.imgur.com/9AyaA0q.jpg",
                               name:         "Kona",
                               description:  "Kona greets everyone with the biggest smile! He's always happy and is so easy to fall in love with. He seems to love everyone he meets, but can get a little overly excited some times and may knock little kids down. He is reportedly housebroken and does well when left alone in the home. He would benefit from daily walks and lots of playtime!",
                               approx_age:   6,
                               sex:          "male",
                               status:       "adoptable")
 
-    new_info = {image:        "kona.jpeg",
+    new_info = {image:        "https://i.imgur.com/9AyaA0q.jpg",
                 name:         "Kona",
                 description:  "Kona greets everyone with the biggest smile! She's always happy and is so easy to fall in love with. She seems to love everyone she meets, but can get a little overly excited some times and may knock little kids down. She is reportedly housebroken and does well when left alone in the home. She would benefit from daily walks and lots of playtime!",
                 approx_age:   6,
@@ -34,7 +34,7 @@ RSpec.describe "As a visitor", type: :feature do
     select new_info[:sex], from: :sex
     click_on "Update Pet"
 
-    expect(page).to have_xpath("//img[contains(@src, #{new_info[:image]})]")
+    expect(page).to have_xpath("//img[contains(@src, '#{new_info[:image]}')]")
     expect(page).to have_content(new_info[:name])
     expect(page).to have_content(new_info[:description])
     expect(page).to have_content("Approximate Age: #{new_info[:approx_age]}")

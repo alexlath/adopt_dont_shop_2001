@@ -9,7 +9,7 @@ RSpec.describe "As a visitor", type: :feature do
                              state:   "CO",
                              zip:     "80231")
 
-    pet = shelter.pets.create(image:        "kona.jpeg",
+    pet = shelter.pets.create(image:        "https://i.imgur.com/9AyaA0q.jpg",
                               name:         "Kona",
                               description:  "Kona greets everyone with the biggest smile! He's always happy and is so easy to fall in love with. He seems to love everyone he meets, but can get a little overly excited some times and may knock little kids down. He is reportedly housebroken and does well when left alone in the home. He would benefit from daily walks and lots of playtime!",
                               approx_age:   6,
@@ -18,7 +18,7 @@ RSpec.describe "As a visitor", type: :feature do
 
     visit "/pets"
 
-    expect(page).to have_xpath("//img[contains(@src, #{pet.image})]")
+    expect(page).to have_xpath("//img[contains(@src, '#{pet.image}')]")
     expect(page).to have_content(pet.name)
     expect(page).to have_content("Approximate Age: #{pet.approx_age}")
     expect(page).to have_content("Sex: #{pet.sex}")

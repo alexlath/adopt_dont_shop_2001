@@ -8,7 +8,7 @@ RSpec.describe "As a user", type: :feature do
                              city:    "Denver",
                              state:   "CO",
                              zip:     "80231")
-    pet = shelter.pets.create(image:        "kona.jpeg",
+    pet = shelter.pets.create(image:        "http://www.petharbor.com/get_image.asp?RES=Detail&ID=A0671703&LOCATION=DDFL",
                               name:         "Kona",
                               description:  "Kona greets everyone with the biggest smile! He's always happy and is so easy to fall in love with. He seems to love everyone he meets, but can get a little overly excited some times and may knock little kids down. He is reportedly housebroken and does well when left alone in the home. He would benefit from daily walks and lots of playtime!",
                               approx_age:   6,
