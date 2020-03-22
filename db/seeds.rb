@@ -46,11 +46,11 @@ pet3 = Pet.create(image:        "https://i.imgur.com/2M5NPna.jpg",
                   approx_age:   11,
                   sex:          "female",
                   status:       "adoptable",
-                  shelter_id:   shelter2.id)
+                  shelter_id:   shelter3.id)
 pet4 = Pet.create(image:        "https://i.imgur.com/I7tu1MA.jpg",
                   name:         "Pearl",
                   description:  "Hey there - my name is Pearl. Some people call me 'Miss Pearl' or 'Pearly Girl', but I pretty much know my name by now, so I will respond to any of those! I'm told that 'pearls' are known to attract wealth and luck. Well I don't know about the wealth part, but my luck sure turned around when I came to MaxFund back in April of 2019.",
                   approx_age:   12,
                   sex:          "female",
                   status:       "pending adoption",
-                  shelter_id:   shelter2.id)
+                  shelter_id:   shelter3.id)
