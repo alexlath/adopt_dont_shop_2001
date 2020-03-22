@@ -18,7 +18,7 @@ RSpec.describe "As a visitor", type: :feature do
 
     visit "/shelters/#{shelter.id}/pets"
 
-    expect(page).to have_content("#{shelter.name} Pets")
+    expect(page).to have_content(shelter.name)
     expect(page).to have_xpath("//img[contains(@src, '#{pet.image}')]")
     expect(page).to have_content(pet.name)
     expect(page).to have_content("Approximate Age: #{pet.approx_age}")
