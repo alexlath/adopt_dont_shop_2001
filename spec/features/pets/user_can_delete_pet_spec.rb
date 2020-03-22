@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "As a user", type: :feature do
-  it "I can delete a pet at 'pets/:id'" do
+  it "I can delete a pet at '/pets/:id'" do
 
     shelter = Shelter.create(name:    "Dumb Friends League",
                              address: "2080 S. Quebec St.",
