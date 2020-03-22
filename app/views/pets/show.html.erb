@@ -1,0 +1,10 @@
+<main>
+  <%= image_tag "#{@pet.image}" %><br/>
+  <h1><%= @pet.name %></h1>
+  <p><%= @pet.description %></p>
+  <ul>
+    <li><%= "Approximate Age: #{@pet.approx_age}" %></li>
+    <li><%= "Sex: #{@pet.sex}" %></li>
+    <li><%= "Status: #{@pet.status}" %></li>
+  </ul>
+</main>
