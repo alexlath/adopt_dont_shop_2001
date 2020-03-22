@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "As a visitor", type: :feature do
-  it "I can see the image, name, age, sex, and shelter of each pet at '/pets'" do
+  it "I can see all pets at '/pets'" do
 
     shelter = Shelter.create(name:    "Dumb Friends League",
                              address: "2080 S. Quebec St.",

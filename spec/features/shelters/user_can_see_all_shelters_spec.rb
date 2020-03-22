@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "As a visitor", type: :feature do
-  it "I can see the name of each shelter at '/shelters'" do
+  it "I can see all shelters at '/shelters'" do
 
     shelter1 = Shelter.create(name:     "Dumb Friends League",
                               address:  "2080 S. Quebec St.",
