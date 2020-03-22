@@ -12,13 +12,14 @@ RSpec.describe "As a visitor", type: :feature do
       visit "/shelters"
 
       click_link "New Shelter"
+
       expect(page).to have_current_path "/shelters/new"
 
-      fill_in "name", with: new_info[:name]
-      fill_in "address", with: new_info[:address]
-      fill_in "city", with: new_info[:city]
-      fill_in "state", with: new_info[:state]
-      fill_in "zip", with: new_info[:zip]
+      fill_in :name, with: new_info[:name]
+      fill_in :address, with: new_info[:address]
+      fill_in :city, with: new_info[:city]
+      fill_in :state, with: new_info[:state]
+      fill_in :zip, with: new_info[:zip]
       click_on "Create Shelter"
 
       expect(page).to have_current_path "/shelters"
