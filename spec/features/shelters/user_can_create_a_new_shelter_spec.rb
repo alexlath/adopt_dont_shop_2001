@@ -13,7 +13,7 @@ RSpec.describe "As a visitor", type: :feature do
 
       click_link "New Shelter"
 
-      expect(page).to have_current_path "/shelters/new"
+      expect(page).to have_current_path("/shelters/new")
 
       fill_in :name, with: new_info[:name]
       fill_in :address, with: new_info[:address]
@@ -22,7 +22,7 @@ RSpec.describe "As a visitor", type: :feature do
       fill_in :zip, with: new_info[:zip]
       click_on "Create Shelter"
 
-      expect(page).to have_current_path "/shelters"
+      expect(page).to have_current_path("/shelters")
       expect(page).to have_content(new_info[:name])
   end
 end

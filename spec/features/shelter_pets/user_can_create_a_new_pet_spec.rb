@@ -19,7 +19,7 @@ RSpec.describe "As a visitor", type: :feature do
 
     click_link "Create Pet"
 
-    expect(page).to have_current_path "/shelters/#{shelter.id}/pets/new"
+    expect(page).to have_current_path("/shelters/#{shelter.id}/pets/new")
 
     fill_in :image, with: new_info[:image]
     fill_in :name, with: new_info[:name]
@@ -28,7 +28,7 @@ RSpec.describe "As a visitor", type: :feature do
     select new_info[:sex], from: :sex
     click_on "Create Pet"
 
-    expect(page).to have_current_path "/shelters/#{shelter.id}/pets"
+    expect(page).to have_current_path("/shelters/#{shelter.id}/pets")
     expect(page).to have_xpath("//img[contains(@src, #{new_info[:image]})]")
     expect(page).to have_content(new_info[:name])
     expect(page).to have_content(new_info[:approx_age])

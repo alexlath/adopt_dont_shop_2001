@@ -13,7 +13,7 @@ RSpec.describe "As a user", type: :feature do
 
     click_link "Delete Shelter"
 
-    expect(page).to have_current_path "/shelters"
+    expect(page).to have_current_path("/shelters")
     expect(page).to_not have_content("Dumb Friends League")
   end
 end
